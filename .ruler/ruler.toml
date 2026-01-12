@@ -40,6 +40,6 @@ default_agents = ["claude", "codex", "opencode"]
 # headers = { Authorization = "Bearer REPLACE_ME" }
 
 [mcp_servers.perplexity]
-command = "uv"
-args = ["run", "perplexity-mcp"]
+command = "perplexity-mcp"
+args = []
 env = { PERPLEXITY_API_KEY = "${PERPLEXITY_API_KEY}" }

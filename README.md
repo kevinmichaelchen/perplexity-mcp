@@ -117,3 +117,22 @@ If everything is working correctly, you should now be able to call the tool from
 To verify the server is working. Open the Claude client and use a prompt like "search the web for news about openai in the past week". You should see an alert box open to confirm tool usage. Click "Allow for this chat".
 
   <img width="600" alt="mcp_screenshot" src="https://github.com/user-attachments/assets/922d8f6a-8c9a-4978-8be6-788e70b4d049" />
+
+### Claude Code Installation
+
+For [Claude Code](https://docs.anthropic.com/en/docs/claude-code), you can install the server globally using `uv tool`:
+
+```bash
+uv tool install perplexity-mcp
+```
+
+Then add the MCP server configuration to your project's `.ruler/ruler.toml` or global Claude settings:
+
+```toml
+[mcp_servers.perplexity]
+command = "perplexity-mcp"
+args = []
+env = { PERPLEXITY_API_KEY = "${PERPLEXITY_API_KEY}" }
+```
+
+Make sure `PERPLEXITY_API_KEY` is set in your environment.
